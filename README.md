@@ -1,3 +1,4 @@
+sudo yum -y update
 sudo yum -y install git
 git clone https://github.com/ankan2013/ceph_benchmark
 cd ceph_benchmark
