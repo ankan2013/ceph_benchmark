@@ -13,6 +13,7 @@ cd ..
 ceph osd pool create bench 100 100
 ceph osd pool set bench min_size 1
 ceph osd pool set bench size 1
+ceph osd pool set bench pg_num 100
 
 ./ceph-gobench/ceph-gobench -t ${threads} -d ${duration} -o ${obj_size} -s ${block_size} --parallel=${parallel} > benchmark_results/gobench.txt
 
