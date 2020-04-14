@@ -1,4 +1,4 @@
-ceph osd pool create rbdbench 80 80
+ceph osd pool create rbdbench 100 100
 rbd create block_device --size 5G --pool rbdbench
 rbd feature disable block_device exclusive-lock object-map fast-diff deep-flatten --pool rbdbench
 sudo rbd map block_device --pool rbdbench --name client.admin
