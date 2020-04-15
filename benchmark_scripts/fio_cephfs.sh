@@ -6,6 +6,6 @@ mkdir cephfs_mountpoint/files
 fio benchmark_configs/fio_cephfs.ini
 
 sudo umount cephfs_mountpoint
-sudo rm -rf cephfs_data
+sudo rm -rf cephfs_mountpoint
 
 
