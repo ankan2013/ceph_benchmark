@@ -21,8 +21,10 @@
 11. Установить ceph на s0 - ceph-deploy install --release VERSION s0 - теперь s0 - клиент, с которого можно управлять кластером с помощью команды ceph. <br>
 На некоторых узлах также можно поднять сервера метаданных для работы CephFS и rados gateways для работы в интерфейсе Amazon S3 (аналогично можно поднять и другие демоны Ceph): <br>
 
+<pre>
 ceph-deploy rgw create s1 s2 s3 <br>
 ceph-deploy mds create s1 s2 s3 <br>
+</pre>
 
 Установка средств тестирования: <br>
 
