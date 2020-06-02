@@ -33,7 +33,7 @@ ceph-deploy mds create s1 s2 s3 <br>
 5. sudo chmod +x benchmark.sh <br>
 6. Указать для переменной directory в benchmark_configs/fio_cephfs.ini адрес директории в примонтированной CephFS, в которой можно размещать файлы для тестов. Если CephFS не примонтирована, то можно создать внутри директории проекта новую директорию и примонтировать CephFS к ней: <br>
 
-&nbsp mkdir cephfs_mountpoint <br>
+<pre> mkdir cephfs_mountpoint <br>
 &nbsp sudo mount -t ceph mon1,mon2,mon3:/ cephfs_mountpoint/ (mon1, mon2, mon3, ... - адреса мониторов ceph) <br>
 &nbsp mkdir cephfs_mountpoint/files (и указать ее в fio_cephfs.ini) <br>
 
