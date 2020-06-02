@@ -20,6 +20,7 @@
 
 11. Установить ceph на s0 - ceph-deploy install --release VERSION s0 - теперь s0 - клиент, с которого можно управлять кластером с помощью команды ceph. <br>
 На некоторых узлах также можно поднять сервера метаданных для работы CephFS и rados gateways для работы в интерфейсе Amazon S3 (аналогично можно поднять и другие демоны Ceph): <br>
+
 ceph-deploy rgw create s1 s2 s3 <br>
 ceph-deploy mds create s1 s2 s3 <br>
 
@@ -32,9 +33,9 @@ ceph-deploy mds create s1 s2 s3 <br>
 5. sudo chmod +x benchmark.sh <br>
 6. Указать для переменной directory в benchmark_configs/fio_cephfs.ini адрес директории в примонтированной CephFS, в которой можно размещать файлы для тестов. Если CephFS не примонтирована, то можно создать внутри директории проекта новую директорию и примонтировать CephFS к ней: <br>
 
-mkdir cephfs_mountpoint <br>
-sudo mount -t ceph mon1,mon2,mon3:/ cephfs_mountpoint/ (mon1, mon2, mon3, ... - адреса мониторов ceph) <br>
-mkdir cephfs_mountpoint/files (и указать ее в fio_cephfs.ini) <br>
+  mkdir cephfs_mountpoint <br>
+  sudo mount -t ceph mon1,mon2,mon3:/ cephfs_mountpoint/ (mon1, mon2, mon3, ... - адреса мониторов ceph) <br>
+  mkdir cephfs_mountpoint/files (и указать ее в fio_cephfs.ini) <br>
 
 7. в benchmark_configs/miniowarp.cfg указать для соответствующих переменных access_key и secret_key для rgw, а также для переменной host адрес rgw и порт <br>
 
